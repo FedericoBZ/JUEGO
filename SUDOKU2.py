@@ -191,19 +191,19 @@ with col3:
 # Visualizza stato del gioco
 if st.session_state.game_status == "success":
     st.balloons()  # Lancia palloncini per celebrare
-    st.success("🎉 Congratulazioni! Hai risolto il Sudoku correttamente! 🎉")
+    st.success("🤓 We have a numbers nerd here eh 🤓")
 elif st.session_state.game_status == "error":
-    st.error("❌ La soluzione non è corretta. Controlla che ogni riga, colonna e quadrante contenga i numeri da 1 a 4 senza ripetizioni.")
+    st.error("🤠 don't shoot randomly cowboy 🤠")
 elif st.session_state.game_status == "incomplete":
-    st.warning("⚠️ Completa tutte le celle prima di verificare la soluzione.")
+    st.warning("⚠️ Complete all cells before checking the solution.")
 elif st.session_state.game_status == "valid_but_different":
-    st.warning("⚠️ La tua soluzione è valida ma diversa dalla soluzione attesa.")
+    st.warning("⚠️ Your solution is good but different from the expected solution.")
 elif st.session_state.game_status == "solution_shown":
-    st.info("ℹ️ Questa è la soluzione corretta del puzzle.")
+    st.info("ℹ️ This is the correct solution to the puzzle.")
 
 # Istruzioni
 if st.session_state.board:
-    st.write("Completa il puzzle inserendo numeri da 1 a 4 in ogni cella vuota.")
+    st.write("Complete the puzzle by inserting numbers 1 to 4 in each empty cell.")
     
     # Creazione della griglia Sudoku con layout quadrato appropriato
     # Ogni riga è una riga di 4 celle
@@ -269,9 +269,9 @@ else:
     # Mostra istruzioni se non c'è un gioco in corso
     st.write("Clicca su 'Genera nuovo puzzle' per iniziare a giocare.")
     st.write("""
-    Regole del Sudoku 4x4:
-    1. Inserisci i numeri da 1 a 4 in ogni cella vuota
-    2. Ogni riga deve contenere i numeri da 1 a 4 senza ripetizioni
-    3. Ogni colonna deve contenere i numeri da 1 a 4 senza ripetizioni
-    4. Ogni quadrante 2x2 deve contenere i numeri da 1 a 4 senza ripetizioni
-    """)
+    4x4 Sudoku rules:
+    1. Enter the numbers 1 to 4 in each empty cell
+    2. Each row must contain the numbers 1 to 4 without repetition
+    3. Each column must contain the numbers 1 to 4 without repetition
+    4. Each 2x2 quadrant must contain the numbers 1 to 4 without repetitions
+    “"”)
